@@ -15,6 +15,6 @@ void Scene1::Update()
 
 void Scene1::Render(HDC hdc)
 {
-	wstring str = L"나 Scene1";
-	TextOut(hdc, WINSIZEX / 2, WINSIZEY / 2, str.c_str(), (int)str.length());
+	wstring str = L"다음 신인 신1이다 뀨! 네이버 신은 없다냥!";
+	TextOut(hdc, WINSIZEX / 2 - 150, WINSIZEY / 2 - 10, str.c_str(), (int)str.length());
 }

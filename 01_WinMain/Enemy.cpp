@@ -9,7 +9,7 @@ Enemy::Enemy(float x, float y)
 	mY = y;
 	mSizeX = 50;
 	mSizeY = 50;
-	mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
+	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
 }
 
 void Enemy::Init()

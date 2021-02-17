@@ -15,6 +15,7 @@ public:
 
 	LRESULT MainProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam);
 
-	void LoadFromImageFile();
+	//bool bStart; // 테스트용
+	//void LoadFromImageFile();
 	//void LoadFromSoundFile();
 };

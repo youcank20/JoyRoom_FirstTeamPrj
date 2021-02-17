@@ -13,7 +13,7 @@ void Player::Init()
 	mY = WINSIZEY / 2;
 	mSizeX = 100;
 	mSizeY = 100;
-	mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
+	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
 }
 
 void Player::Release()
@@ -39,7 +39,7 @@ void Player::Update()
 		ObjectManager::GetInstance()->AddObject(ObjectLayer::Player, bullet);
 	}
 
-	mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
+	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
 }
 
 void Player::Render(HDC hdc)

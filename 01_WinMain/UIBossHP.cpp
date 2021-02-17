@@ -21,5 +21,5 @@ void UIBossHP::Update()
 
 void UIBossHP::Render(HDC hdc)
 {
-	TextOut(hdc, WINSIZEX / 2, 50, mText.c_str(), mText.length());
+	TextOut(hdc, WINSIZEX / 2, 50, mText.c_str(), (int)mText.length());
 }

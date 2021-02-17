@@ -19,7 +19,7 @@ void Bullet::Update()
 	mX += cosf(mAngle) * mSpeed * Time::GetInstance()->DeltaTime();
 	mY += -sinf(mAngle) * mSpeed * Time::GetInstance()->DeltaTime();
 
-	mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
+	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
 
 	vector<GameObject*> enemyList = 
 		ObjectManager::GetInstance()->GetObjectList(ObjectLayer::Enemey);
@@ -49,7 +49,7 @@ void Bullet::Fire(float x, float y, float angle, float speed)
 {
 	mX = x;
 	mY = y;
-	mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
+	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
 	mAngle = angle;
 	mSpeed = speed;
 }
