@@ -56,6 +56,7 @@ void MainGame::Update()
 	{
 		SceneManager::GetInstance()->LoadScene(L"Scene2");
 	}
+	// hihi
 }
 
 void MainGame::Render(HDC hdc)
