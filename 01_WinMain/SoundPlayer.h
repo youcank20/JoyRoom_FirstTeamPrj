@@ -39,3 +39,4 @@ public:
 	//float GetPosition(const wstring& keyName);
 };
 
+#define SOUNDMANAGER SoundPlayer::GetInstance()

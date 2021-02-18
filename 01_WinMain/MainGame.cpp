@@ -4,6 +4,9 @@
 #include "Image.h"
 
 #include "Scene1.h"
+
+//테스트용
+
 /*
 Scene : 스테이지 단위를 씬이라고 함
 */
