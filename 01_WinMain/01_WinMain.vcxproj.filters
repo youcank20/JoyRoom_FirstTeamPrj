@@ -52,17 +52,20 @@
     <Filter Include="FrameWork\ObjectManager">
       <UniqueIdentifier>{6215046f-ec51-44bf-97c0-c412b278199e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MainGame\Object">
-      <UniqueIdentifier>{8ba0bffb-32df-468b-951e-cbf8d5da05c3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MainGame\UI">
-      <UniqueIdentifier>{10584186-4397-44e7-a76d-ca1815a3b5b9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="FrameWork\Scene">
       <UniqueIdentifier>{1c4af559-3b64-424a-b909-e41be6ac5c3f}</UniqueIdentifier>
     </Filter>
     <Filter Include="MainGame\Scene">
       <UniqueIdentifier>{aa9c857f-4c08-41fa-988a-b6dd3143474c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameWork\Animation">
+      <UniqueIdentifier>{4e941a03-cb9b-4e38-ab9a-e5525b61b9ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainGame\Object">
+      <UniqueIdentifier>{dd6cd637-c9b4-4dd0-bb6e-5f1aef095a25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FrameWork\GameEvent">
+      <UniqueIdentifier>{d1911068-58c6-4da3-9516-415c40175f80}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -123,18 +126,6 @@
     <ClInclude Include="ObjectManager.h">
       <Filter>FrameWork\ObjectManager</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>MainGame\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="Bullet.h">
-      <Filter>MainGame\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>MainGame\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="UIBossHP.h">
-      <Filter>MainGame\UI</Filter>
-    </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>FrameWork\Scene</Filter>
     </ClInclude>
@@ -144,11 +135,20 @@
     <ClInclude Include="Scene1.h">
       <Filter>MainGame\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Scene2.h">
-      <Filter>MainGame\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="LoadingScene.h">
       <Filter>FrameWork\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>FrameWork\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>MainGame\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEvent.h">
+      <Filter>FrameWork\GameEvent</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEventManager.h">
+      <Filter>FrameWork\GameEvent</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -194,18 +194,6 @@
     <ClCompile Include="ObjectManager.cpp">
       <Filter>FrameWork\ObjectManager</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>MainGame\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>MainGame\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>MainGame\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="UIBossHP.cpp">
-      <Filter>MainGame\UI</Filter>
-    </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>FrameWork\Scene</Filter>
     </ClCompile>
@@ -218,11 +206,20 @@
     <ClCompile Include="Scene1.cpp">
       <Filter>MainGame\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Scene2.cpp">
-      <Filter>MainGame\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="LoadingScene.cpp">
       <Filter>FrameWork\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>FrameWork\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>MainGame\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEvent.cpp">
+      <Filter>FrameWork\GameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEventManager.cpp">
+      <Filter>FrameWork\GameEvent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

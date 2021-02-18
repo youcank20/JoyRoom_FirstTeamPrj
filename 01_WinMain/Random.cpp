@@ -6,6 +6,6 @@ Random* Random::_instance = NULL;
 
 Random::Random()
 {
-	srand((unsigned int)time(NULL));
+	srand(time(NULL));
 }
 

@@ -1,6 +1,5 @@
 #pragma once
 #include "Scene.h"
-
 class Scene1 : public Scene
 {
 public:
@@ -9,3 +8,4 @@ public:
 	void Update()override;
 	void Render(HDC hdc)override;
 };
+

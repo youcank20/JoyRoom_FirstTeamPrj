@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <queue> // 뀨
 
 using namespace std;
 
@@ -36,6 +37,7 @@ using namespace std;
 #include "SoundPlayer.h"
 #include "ObjectManager.h"
 #include "SceneManager.h"
+#include "GameEventManager.h"
 
 extern POINT _mousePosition;	//마우스 좌표
 extern HWND	_hWnd;

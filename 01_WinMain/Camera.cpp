@@ -5,13 +5,13 @@
 
 void Camera::Init()
 {
-	mMode = Mode::Free;
-	mTarget = nullptr;
-	mX = WINSIZEX / 2;
-	mY = WINSIZEY / 2;
+	mMode = Mode::Follow;
+	//mTarget = nullptr;
+	//mX = WINSIZEX / 2;
+	//mY = WINSIZEY / 2;
 	mSizeX = WINSIZEX;
 	mSizeY = WINSIZEY;
-	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
+	mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
 	mMoveSpeed = 5.f;
 }
 
@@ -33,7 +33,7 @@ void Camera::Update()
 			mX = Math::Lerp(mX, mTarget->GetX(), 2.f * Time::GetInstance()->DeltaTime());
 			mY = Math::Lerp(mY, mTarget->GetY(), 2.f * Time::GetInstance()->DeltaTime());
 
-			mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
+			mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
 		}
 		break;
 	case Camera::Mode::Free:
@@ -41,7 +41,7 @@ void Camera::Update()
 		if (Input::GetInstance()->GetKey('D'))mX += mMoveSpeed;
 		if (Input::GetInstance()->GetKey('W'))mY -= mMoveSpeed;
 		if (Input::GetInstance()->GetKey('S'))mY += mMoveSpeed;
-		mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
+		mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
 		break;
 	}
 }
@@ -96,7 +96,7 @@ void Camera::AlphaScaleFrameRender(HDC hdc, Image * image, int x, int y, int fra
 	image->AlphaScaleFrameRender(hdc, x - mRect.left, y - mRect.top, frameX, frameY, width, height, alpha);
 }
 
-void Camera::RenderRectC(HDC hdc, RECT rc)
+void Camera::RenderRect(HDC hdc, RECT rc)
 {
 	rc.left -= mRect.left;
 	rc.right -= mRect.left;
@@ -105,14 +105,14 @@ void Camera::RenderRectC(HDC hdc, RECT rc)
 	RenderRect(hdc, rc);
 }
 
-void Camera::RenderEllipseC(HDC hdc, float x, float y, float radius)
+void Camera::RenderEllipse(HDC hdc, float x, float y, float radius)
 {
-	RenderEllipse(hdc, (int)x - mRect.left, (int)y - mRect.top, (int)radius);
+	RenderEllipse(hdc, x - mRect.left, y - mRect.top, radius);
 }
 
 bool Camera::IsInCameraArea(float x, float y, float width, float height)
 {
-	RECT rc = RectMakeCenter((int)x, (int)y, (int)width, (int)height);
+	RECT rc = RectMakeCenter(x, y, width, height);
 	return IsInCameraArea(rc);
 }
 

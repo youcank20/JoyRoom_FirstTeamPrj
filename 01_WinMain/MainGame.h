@@ -1,5 +1,10 @@
 #pragma once
-#include "GameObject.h"
+
+/*
+1. 애니메이션 
+2. 이벤트 만드는 법
+*/
+
 class Image;
 
 class MainGame
@@ -14,8 +19,5 @@ public:
 	void RenderTime(HDC hdc);
 
 	LRESULT MainProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam);
-
-	//bool bStart; // 테스트용
-	//void LoadFromImageFile();
-	//void LoadFromSoundFile();
 };
+
