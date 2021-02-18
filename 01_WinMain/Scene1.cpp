@@ -4,6 +4,8 @@
 #include "Player.h"
 #include "Camera.h"
 #include "GameEvent.h"
+#include "Image.h"
+
 void Scene1::Init()
 {
 	Player* player1 = new Player("1", 100, WINSIZEY / 2);
@@ -24,6 +26,9 @@ void Scene1::Init()
 	GameEventManager::GetInstance()->PushEvent(new IChangeCameraTargetEvent(player2));
 	GameEventManager::GetInstance()->PushEvent(new IDelayEvent(3.0f));
 	GameEventManager::GetInstance()->PushEvent(new IChangeCameraTargetEvent(player1));
+
+	IMAGEMANAGER->LoadFromFile(L"Field", Resources(L"Field.bmp"), 1200, 1200, false);
+	mBackground = IMAGEMANAGER->FindImage(L"Field");
 }
 
 void Scene1::Release()
@@ -39,5 +44,7 @@ void Scene1::Update()
 
 void Scene1::Render(HDC hdc)
 {
+	CameraManager::GetInstance()->GetMainCamera()->ScaleRender(hdc, mBackground, -960, 0, 3600, 3600);
+//	mBackground->ScaleRender(hdc, 0, 0, 2400, 2400);
 	ObjectManager::GetInstance()->Render(hdc);
 }
