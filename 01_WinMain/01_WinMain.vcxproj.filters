@@ -150,6 +150,9 @@
     <ClInclude Include="GameEventManager.h">
       <Filter>FrameWork\GameEvent</Filter>
     </ClInclude>
+    <ClInclude Include="Milotic.h">
+      <Filter>MainGame\Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="01_WinMain.cpp">
@@ -220,6 +223,9 @@
     </ClCompile>
     <ClCompile Include="GameEventManager.cpp">
       <Filter>FrameWork\GameEvent</Filter>
+    </ClCompile>
+    <ClCompile Include="Milotic.cpp">
+      <Filter>MainGame\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -39,6 +39,14 @@ void GameEventManager::Update()
 	}
 }
 
+void GameEventManager::Render(HDC hdc)
+{
+	if (mEventQueue.size() == 0)
+		return;
+
+	mEventQueue.front()->Render(hdc);
+}
+
 void GameEventManager::PushEvent(IEvent * event)
 {
 	if (mEventQueue.size() == 0)

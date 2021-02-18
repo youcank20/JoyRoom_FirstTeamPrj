@@ -25,6 +25,10 @@ bool IChangeCameraTargetEvent::Update()
 	return false;
 }
 
+void IChangeCameraTargetEvent::Render(HDC hdc)
+{
+}
+
 IDelayEvent::IDelayEvent(float delayTime)
 {
 	mDelayTime = delayTime;
@@ -45,4 +49,41 @@ bool IDelayEvent::Update()
 	}
 
 	return false;
+}
+
+void IDelayEvent::Render(HDC hdc)
+{
+}
+
+IScriptEvent::IScriptEvent(wstring image, wstring script)
+{
+	mImage = IMAGEMANAGER->FindImage(image);
+	mScript = script;
+	mDelayTime = 3.f;
+	mCurrentTime = 0.f;
+}
+
+void IScriptEvent::Start()
+{
+}
+
+bool IScriptEvent::Update()
+{
+	mCurrentTime += Time::GetInstance()->DeltaTime();
+
+	if (mCurrentTime >= mDelayTime)
+	{
+		mScript = L"";
+		return true;
+	}
+
+	return false;
+}
+
+void IScriptEvent::Render(HDC hdc)
+{
+	CameraManager::GetInstance()->GetMainCamera()->Render(hdc, mImage
+		, 10 + CameraManager::GetInstance()->GetMainCamera()->GetRect().left
+		, 550 + CameraManager::GetInstance()->GetMainCamera()->GetRect().top);
+	TextOut(hdc, 200, 600, mScript.c_str(), mScript.length());
 }

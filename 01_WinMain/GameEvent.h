@@ -8,6 +8,7 @@ public:
 	virtual void Start() = 0;	//이벤트 시작할 때 호출되는 함수
 	//실행하다가 끝나면 return true
 	virtual bool Update() = 0;	//이벤트 업데이트 함수
+	virtual void Render(HDC hdc) = 0;
 };
 
 class IChangeCameraTargetEvent : public IEvent
@@ -18,6 +19,7 @@ public:
 
 	void Start()override;
 	bool Update()override;
+	void Render(HDC hdc)override;
 };
 
 class IDelayEvent : public IEvent
@@ -29,4 +31,19 @@ public:
 
 	void Start()override;
 	bool Update()override;
+	void Render(HDC hdc)override;
+};
+
+class IScriptEvent : public IEvent
+{
+	Image* mImage;
+	wstring mScript;
+	float mCurrentTime;
+	float mDelayTime;
+public:
+	IScriptEvent(wstring image, wstring script);
+
+	void Start()override;
+	bool Update()override;
+	void Render(HDC hdc)override;
 };

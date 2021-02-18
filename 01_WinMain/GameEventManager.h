@@ -13,6 +13,7 @@ public:
 
 	void RemoveAllEvent();
 	void Update();
+	void Render(HDC hdc);
 
 	void PushEvent(class IEvent* event);
 };
