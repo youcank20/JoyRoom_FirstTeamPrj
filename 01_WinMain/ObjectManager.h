@@ -12,6 +12,7 @@ enum class ObjectLayer : int
 	Player,
 	Monster,
 	Bullet,
+	MonBullet,
 	UI,
 	End
 };

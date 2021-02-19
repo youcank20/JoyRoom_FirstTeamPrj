@@ -16,9 +16,7 @@
 void Scene1::Init()
 {
 	Player* player1 = new Player("1", 100, WINSIZEY / 2);
-	Player* player2 = new Player("2", WINSIZEX - 100, WINSIZEY / 2);
 	ObjectManager::GetInstance()->AddObject(ObjectLayer::Player, player1);
-	ObjectManager::GetInstance()->AddObject(ObjectLayer::Player, player2);
 
 	Milotic* milotic = new Milotic("milotic", WINSIZEX + 50, WINSIZEY / 2);
 	ObjectManager::GetInstance()->AddObject(ObjectLayer::Player, milotic);
