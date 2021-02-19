@@ -180,6 +180,9 @@
     <ClInclude Include="CollisionManager.h">
       <Filter>MainGame</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>MainGame\Object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="01_WinMain.cpp">
@@ -274,6 +277,9 @@
     </ClCompile>
     <ClCompile Include="CollisionManager.cpp">
       <Filter>MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>MainGame\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
