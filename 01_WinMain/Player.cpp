@@ -27,6 +27,13 @@ void Player::Init()
 	mRunAnimation->SetIsLoop(true);
 	mRunAnimation->SetFrameUpdateTime(0.1f);
 
+	//Animation* attackAnimation = new Animation();
+	mAttackAnimation = new Animation();
+	mAttackAnimation->InitFrameByStartEnd(0, 1, 6, 1, false);
+	mAttackAnimation->SetIsLoop(false);
+	mAttackAnimation->SetFrameUpdateTime(0.2f);
+	mAttackAnimation->SetCallbackFunc(bind(&Player::OnAnimEndAttack, this));
+
 	mCurrentAnimation = mIdleAnimation;
 	mSizeX = (float)(mImage->GetFrameWidth());
 	mSizeY = (float)(mImage->GetFrameHeight());
@@ -52,7 +59,14 @@ void Player::Update()
 		mCurrentAnimation = mIdleAnimation;
 		mCurrentAnimation->Play();
 	}
+	if (Input::GetInstance()->GetKeyDown('K'))
+	{
+		mCurrentAnimation->Stop();
+		mCurrentAnimation = mAttackAnimation;
+		mCurrentAnimation->Play();
 
+		//공격랙트생성
+	}
 	mCurrentAnimation->Update();
 }
 
@@ -65,4 +79,12 @@ void Player::Render(HDC hdc)
 
 	//mImage->FrameRender(hdc,mRect.left,mRect.top, mCurrentAnimation->GetNowFrameX(),
 	//	mCurrentAnimation->GetNowFrameY());
+}
+
+void Player::OnAnimEndAttack()
+{
+	//Idle로 상태 변경등등
+	mCurrentAnimation->Stop();
+	mCurrentAnimation = mIdleAnimation;
+	mCurrentAnimation->Play();
 }

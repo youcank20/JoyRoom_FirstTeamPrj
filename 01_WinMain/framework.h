@@ -13,6 +13,7 @@
 #include <vector>
 #include <map>
 #include <queue> // 뀨
+#include <functional>
 
 using namespace std;
 

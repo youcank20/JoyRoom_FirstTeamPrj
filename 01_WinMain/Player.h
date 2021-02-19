@@ -5,7 +5,11 @@ class Player : public GameObject
 	class Image* mImage;
 	class Animation* mIdleAnimation;
 	class Animation* mRunAnimation;
+	class Animation* mAttackAnimation;	//공격
 	class Animation* mCurrentAnimation;	//현재 애니메이션
+
+
+
 public:
 	Player(const string& name,float x, float y);
 
@@ -13,4 +17,7 @@ public:
 	void Release()override;
 	void Update()override;
 	void Render(HDC hdc)override;
+
+	void OnAnimEndAttack();
+
 };

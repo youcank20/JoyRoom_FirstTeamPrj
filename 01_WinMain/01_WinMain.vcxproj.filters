@@ -177,6 +177,9 @@
     <ClInclude Include="Charmeleon.h">
       <Filter>MainGame\Object\Monster\EachMonster</Filter>
     </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>MainGame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="01_WinMain.cpp">
@@ -268,6 +271,9 @@
     </ClCompile>
     <ClCompile Include="Charmeleon.cpp">
       <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>MainGame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
