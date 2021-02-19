@@ -6,6 +6,13 @@ Monster::Monster(const string & name, float x, float y)
 {
 	mX = x;
 	mY = y;
+
+	mAttacked = false;
+	mDieAlpha = 1.f;
+	mPrevIndex = 0;
+	mAttackWait = false;
+	mAttackWaitTime = 0.f;
+	mHurtTime = 0.f;
 }
 
 void Monster::Init()

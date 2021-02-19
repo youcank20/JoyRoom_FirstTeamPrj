@@ -40,9 +40,20 @@ void Scene1::Init()
 	IMAGEMANAGER->LoadFromFile(L"milotic_profile", Resources(L"milotic_profile.bmp"), 120, 120, false);
 
 	// {{ 여기부터 몬스터
-	Gengar* gengar = new Gengar("Gengar", 200, 100);
-	gengar->Init();
-	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, gengar);
+	Gengar* gengar1 = new Gengar("Gengar1", 200, 100, player1);
+	gengar1->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, gengar1);
+	Gengar* gengar2 = new Gengar("Gengar2", 350, 300, player1);
+	gengar2->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, gengar2);
+	Gengar* gengar3 = new Gengar("Gengar3", 300, 550, player1);
+	gengar3->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, gengar3);
+	Gengar* gengar4 = new Gengar("Gengar4", -150, 300, player1);
+	gengar4->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, gengar4);
+
+
 
 	// 여기까지 몬스터 }}
 }
