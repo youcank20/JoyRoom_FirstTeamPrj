@@ -39,9 +39,9 @@ void Milotic::Init()
 	mRightRunAnimation->SetFrameUpdateTime(0.1f);
 
 	mCurrentAnimation = mLeftIdleAnimation;
-	mSizeX = mImage->GetFrameWidth();
-	mSizeY = mImage->GetFrameHeight();
-	mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
+	mSizeX = (float)(mImage->GetFrameWidth());
+	mSizeY = (float)(mImage->GetFrameHeight());
+	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
 }
 
 void Milotic::Release()

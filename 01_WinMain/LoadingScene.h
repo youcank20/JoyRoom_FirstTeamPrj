@@ -16,4 +16,3 @@ public:
 
 	bool GetIsEndLoading()const { return mIsEndLoading; }
 };
-

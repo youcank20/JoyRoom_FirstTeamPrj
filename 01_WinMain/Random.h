@@ -39,4 +39,3 @@ public:
 		return rand() % (endNum - startNum + 1) + startNum;
 	}
 };
-

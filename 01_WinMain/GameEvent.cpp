@@ -85,5 +85,5 @@ void IScriptEvent::Render(HDC hdc)
 	CameraManager::GetInstance()->GetMainCamera()->Render(hdc, mImage
 		, 10 + CameraManager::GetInstance()->GetMainCamera()->GetRect().left
 		, 550 + CameraManager::GetInstance()->GetMainCamera()->GetRect().top);
-	TextOut(hdc, 200, 600, mScript.c_str(), mScript.length());
+	TextOut(hdc, 200, 600, mScript.c_str(), (int)mScript.length());
 }

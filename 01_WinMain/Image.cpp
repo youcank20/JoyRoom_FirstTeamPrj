@@ -8,7 +8,6 @@ Image::Image()
 {
 }
 
-
 Image::~Image()
 {
 	ReleaseBuffer();
@@ -188,7 +187,6 @@ bool Image::LoadFromFile(wstring fileName, int width, int height, int frameX, in
 
 	return true;
 }
-
 
 /*
 ## Render ##
@@ -455,5 +453,3 @@ void Image::AlphaScaleFrameRender(HDC hdc, int x, int y, int frameX, int frameY,
 		);
 	}
 }
-
-

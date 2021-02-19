@@ -10,7 +10,7 @@ enum class ObjectLayer : int
 {
 	Background = 0, 
 	Player = 1,
-	Enemey = 2,
+	Monster = 2,
 	UI = 3,
 	End
 };
@@ -36,4 +36,3 @@ public:
 	vector<class GameObject*> FindObjects(ObjectLayer layer, const string& name);
 	vector<class GameObject*> GetObjectList(ObjectLayer layer);
 };
-

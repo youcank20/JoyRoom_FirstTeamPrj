@@ -10,4 +10,3 @@ public :
 	static float GetAngle(float aX, float aY, float bX, float bY);
 	static float Lerp(float start, float end, float ratio);
 };
-

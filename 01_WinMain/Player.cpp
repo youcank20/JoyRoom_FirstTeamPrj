@@ -28,9 +28,9 @@ void Player::Init()
 	mRunAnimation->SetFrameUpdateTime(0.1f);
 
 	mCurrentAnimation = mIdleAnimation;
-	mSizeX = mImage->GetFrameWidth();
-	mSizeY = mImage->GetFrameHeight();
-	mRect = RectMakeCenter(mX, mY, mSizeX, mSizeY);
+	mSizeX = (float)(mImage->GetFrameWidth());
+	mSizeY = (float)(mImage->GetFrameHeight());
+	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
 }
 
 void Player::Release()

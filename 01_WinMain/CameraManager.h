@@ -10,4 +10,3 @@ public:
 	inline void SetMainCamera(Camera* main) { mMainCamera = main; }
 	inline class Camera* GetMainCamera()const { return mMainCamera; }
 };
-

@@ -112,7 +112,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd
 	// PeekMessage , GetMessage 차이 조사
 	while (true)
 	{
-		if (PeekMessage(&message, NULL, 0, 0, PM_REMOVE) == true)
+		if (PeekMessage(&message, NULL, 0, 0, PM_REMOVE))
 		{
 			if (message.message == WM_QUIT)
 			{
@@ -135,7 +135,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmd
 	_mainGame->Release();
 	delete _mainGame;
 
-	return message.wParam;
+	return (int)message.wParam;
 }
 
 //Proc함수 : 어떤 메세지가 들어올 때 마다 해당 함수가 호출된다.

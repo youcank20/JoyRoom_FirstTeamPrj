@@ -33,4 +33,3 @@ public:
 	inline float GetTimeScale()const { return this->mTimeScale; }
 	inline void SetTimeScale(float scale) { this->mTimeScale = scale; }
 };
-

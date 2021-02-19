@@ -1,10 +1,8 @@
 #pragma once
-#include "Scene.h"
+#include "Monster.h"
 
-class Image;
-class Scene1 : public Scene
+class Wobbuffet : public Monster // ¸¶ÀÚ¿ë
 {
-	Image* mBackground;
 public:
 	void Init()override;
 	void Release()override;

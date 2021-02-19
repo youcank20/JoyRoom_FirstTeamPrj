@@ -8,6 +8,8 @@
 
 #include "Milotic.h"
 
+#include "Gengar.h"
+
 void Scene1::Init()
 {
 	Player* player1 = new Player("1", 100, WINSIZEY / 2);
@@ -36,6 +38,13 @@ void Scene1::Init()
 	mBackground = IMAGEMANAGER->FindImage(L"Field");
 
 	IMAGEMANAGER->LoadFromFile(L"milotic_profile", Resources(L"milotic_profile.bmp"), 120, 120, false);
+
+	// {{ 여기부터 몬스터
+	Gengar* gengar = new Gengar("Gengar", 200, 100);
+	gengar->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, gengar);
+
+	// 여기까지 몬스터 }}
 }
 
 void Scene1::Release()

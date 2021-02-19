@@ -19,4 +19,3 @@ public:
 	Animation* GetCurrentAnimation() { return mCurrentAnimation; }
 	void SetCurrentAnimation(Animation* animation) { mCurrentAnimation = animation; }
 };
-

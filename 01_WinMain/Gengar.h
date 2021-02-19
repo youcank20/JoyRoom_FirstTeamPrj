@@ -1,11 +1,11 @@
 #pragma once
-#include "Scene.h"
+#include "Monster.h"
 
-class Image;
-class Scene1 : public Scene
+class Gengar : public Monster
 {
-	Image* mBackground;
 public:
+	Gengar(const string& name, float x, float y);
+
 	void Init()override;
 	void Release()override;
 	void Update()override;

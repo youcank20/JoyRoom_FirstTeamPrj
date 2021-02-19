@@ -19,4 +19,3 @@ public:
 	bool GetKey(int key);		//키를 계속 누르고 있다면 true반환
 	bool GetToggleKey(int key);	//Toggle
 };
-

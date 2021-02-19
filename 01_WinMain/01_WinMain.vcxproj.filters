@@ -67,6 +67,12 @@
     <Filter Include="FrameWork\GameEvent">
       <UniqueIdentifier>{d1911068-58c6-4da3-9516-415c40175f80}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MainGame\Object\Monster">
+      <UniqueIdentifier>{fe9126f6-5682-4cdb-bb5c-c43ac483d4f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainGame\Object\Monster\EachMonster">
+      <UniqueIdentifier>{532646af-fe8b-4e66-83b0-837e176b11e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -153,6 +159,24 @@
     <ClInclude Include="Milotic.h">
       <Filter>MainGame\Object</Filter>
     </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>MainGame\Object\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Psyduck.h">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClInclude>
+    <ClInclude Include="Wobbuffet.h">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClInclude>
+    <ClInclude Include="Gengar.h">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClInclude>
+    <ClInclude Include="Staravia.h">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClInclude>
+    <ClInclude Include="Charmeleon.h">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="01_WinMain.cpp">
@@ -226,6 +250,24 @@
     </ClCompile>
     <ClCompile Include="Milotic.cpp">
       <Filter>MainGame\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>MainGame\Object\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Psyduck.cpp">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClCompile>
+    <ClCompile Include="Wobbuffet.cpp">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClCompile>
+    <ClCompile Include="Gengar.cpp">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClCompile>
+    <ClCompile Include="Staravia.cpp">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
+    </ClCompile>
+    <ClCompile Include="Charmeleon.cpp">
+      <Filter>MainGame\Object\Monster\EachMonster</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
