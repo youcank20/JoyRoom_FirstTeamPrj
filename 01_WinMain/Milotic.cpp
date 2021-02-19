@@ -51,7 +51,35 @@ void Milotic::Release()
 
 void Milotic::Update()
 {
+	if (mIsEventMove)
+	{
+		if (mCurrentAnimation != mLeftRunAnimation)
+		{
+			mCurrentAnimation->Stop();
+			mCurrentAnimation = mLeftRunAnimation;
+			mCurrentAnimation->Play();
+		}
+	}
+	else
+	{
+		if (mCurrentAnimation != mLeftIdleAnimation)
+		{
+			mCurrentAnimation->Stop();
+			mCurrentAnimation = mLeftIdleAnimation;
+			mCurrentAnimation->Play();
+		}
+	}
+
+	/*{
+		mX = Math::Lerp(mX, mTargetX, 0.5f * Time::GetInstance()->DeltaTime());
+		mY = Math::Lerp(mY, mTargetY, 0.5f * Time::GetInstance()->DeltaTime());
+
+		mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
+	}*/
+
 	mCurrentAnimation->Update();
+
+	mRect = RectMakeCenter((int)mX, (int)mY, (int)mSizeX, (int)mSizeY);
 }
 
 void Milotic::Render(HDC hdc)
