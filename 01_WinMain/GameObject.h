@@ -12,6 +12,10 @@ protected:
 
 	bool mIsActive;		//활성화 상태
 	bool mIsDestroy;	//삭제할지 말지
+
+	bool mIsEventMove;	// 이벤트 때 움직이게..
+	float mTargetX;
+	float mTargetY;
 public:
 	GameObject();
 	GameObject(const string& name);
@@ -38,4 +42,9 @@ public:
 	inline void SetIsActive(bool b) { mIsActive = b; }
 	inline bool GetIsDestroy()const { return mIsDestroy; }
 	inline void SetIsDestroy(bool b) { mIsDestroy = b; }
+
+	inline bool GetIsEventMove()const { return mIsEventMove; }	// 이벤트 때 움직이도록
+	inline void SetIsEventMove(bool b) { mIsEventMove = b; }
+	inline void SetTargetX(float x) { mTargetX = x; }
+	inline void SetTargetY(float y) { mTargetY = y; }
 };

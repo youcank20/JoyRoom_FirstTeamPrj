@@ -47,3 +47,19 @@ public:
 	bool Update()override;
 	void Render(HDC hdc)override;
 };
+
+class IMoveGameObject : public IEvent
+{
+	class GameObject* mObject;
+	float mTargetX;
+	float mTargetY;
+	float mSpeedX;
+	float mSpeedY;
+public:
+	IMoveGameObject(GameObject* object, GameObject* target);
+	IMoveGameObject(GameObject* object, float x, float y);
+
+	void Start()override;
+	bool Update()override;
+	void Render(HDC hdc)override;
+};

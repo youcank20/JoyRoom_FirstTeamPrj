@@ -38,6 +38,7 @@ void Scene1::Init()
 	mBackground = IMAGEMANAGER->FindImage(L"Field");
 
 	IMAGEMANAGER->LoadFromFile(L"milotic_profile", Resources(L"milotic_profile.bmp"), 120, 120, false);
+	IMAGEMANAGER->LoadFromFile(L"pikachu_profile", Resources(L"pikachu_profile.bmp"), 120, 120, false);
 
 	// {{ 여기부터 몬스터
 	Gengar* gengar1 = new Gengar("Gengar1", 200, 100, player1);
@@ -65,17 +66,33 @@ void Scene1::Release()
 
 void Scene1::Update()
 {
-	if(Input::GetInstance()->GetKeyDown(VK_SPACE))
+	//if(ObjectManager::GetInstance()->GetObjectList(ObjectLayer::Monster).size() == NULL)
+	if (Input::GetInstance()->GetKeyDown(VK_SPACE))
 	{
 		//GameEventManager::GetInstance()->PushEvent(new IDelayEvent(2.0f));
 		//GameEventManager::GetInstance()->PushEvent(new IChangeCameraTargetEvent(ObjectManager::GetInstance()->FindObject("milotic")));
 		//dynamic_cast<Milotic*>(ObjectManager::GetInstance()->FindObject("milotic"))->GetCurrentAnimation()->;
+		GameEventManager::GetInstance()->PushEvent(new IChangeCameraTargetEvent(ObjectManager::GetInstance()->FindObject("milotic")));
+		GameEventManager::GetInstance()->PushEvent(
+			new IMoveGameObject(ObjectManager::GetInstance()->FindObject("milotic"), ObjectManager::GetInstance()->FindObject("1")));
+
+		GameEventManager::GetInstance()->PushEvent(new IDelayEvent(1.f));
+
 		GameEventManager::GetInstance()->PushEvent(
 			new IScriptEvent(L"milotic_profile", L"이것은 테스트용 문장이다"));
 		GameEventManager::GetInstance()->PushEvent(
 			new IScriptEvent(L"milotic_profile", L"문장을 바꿔보겠다"));
 		GameEventManager::GetInstance()->PushEvent(
+			new IScriptEvent(L"pikachu_profile", L"이건 대사 주고받기다"));
+		GameEventManager::GetInstance()->PushEvent(
 			new IScriptEvent(L"milotic_profile", L"아 이게 되네 ㅋㅋㅋㅋㅋ"));
+		GameEventManager::GetInstance()->PushEvent(
+			new IScriptEvent(L"pikachu_profile", L"만ㅡ족"));
+
+		GameEventManager::GetInstance()->PushEvent(new IChangeCameraTargetEvent(ObjectManager::GetInstance()->FindObject("1")));
+		GameEventManager::GetInstance()->PushEvent(
+			new IMoveGameObject(ObjectManager::GetInstance()->FindObject("milotic"), WINSIZEX * 2, ObjectManager::GetInstance()->FindObject("milotic")->GetY()));
+
 	}
 
 	ObjectManager::GetInstance()->Update();
