@@ -9,6 +9,9 @@
 #include "Milotic.h"
 
 #include "Gengar.h"
+#include "Wobbuffet.h"
+#include "Psyduck.h"
+#include "Staravia.h"
 
 void Scene1::Init()
 {
@@ -53,9 +56,47 @@ void Scene1::Init()
 	gengar4->Init();
 	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, gengar4);
 
+	Wobbuffet* wobbuffet1 = new Wobbuffet("Wobbuffet1", 150, 100, player1);
+	wobbuffet1->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, wobbuffet1);
+	Wobbuffet* wobbuffet2 = new Wobbuffet("Wobbuffet2", 300, 300, player1);
+	wobbuffet2->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, wobbuffet2);
+	Wobbuffet* wobbuffet3 = new Wobbuffet("Wobbuffet3", 250, 550, player1);
+	wobbuffet3->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, wobbuffet3);
+	Wobbuffet* wobbuffet4 = new Wobbuffet("Wobbuffet4", -150, 250, player1);
+	wobbuffet4->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, wobbuffet4);
+
+	Psyduck* psyduck1 = new Psyduck("Psyduck1", 160, 100, player1);
+	psyduck1->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, psyduck1);
+	Psyduck* psyduck2 = new Psyduck("Psyduck2", 310, 300, player1);
+	psyduck2->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, psyduck2);
+	Psyduck* psyduck3 = new Psyduck("Psyduck3", 260, 550, player1);
+	psyduck3->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, psyduck3);
+	Psyduck* psyduck4 = new Psyduck("Psyduck4", -140, 250, player1);
+	psyduck4->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, psyduck4);
+
+	Staravia* staravia1 = new Staravia("staravia1", 167, 100, player1);
+	staravia1->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, staravia1);
+	Staravia* staravia2 = new Staravia("staravia2", 317, 300, player1);
+	staravia2->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, staravia2);
+	Staravia* staravia3 = new Staravia("staravia3", 267, 550, player1);
+	staravia3->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, staravia3);
+	Staravia* staravia4 = new Staravia("staravia4", -127, 250, player1);
+	staravia4->Init();
+	ObjectManager::GetInstance()->AddObject(ObjectLayer::Monster, staravia4);
 
 
-	// 여기까지 몬스터 }}
+	// 여기까지 몬스터 }}Psyduck
 }
 
 void Scene1::Release()

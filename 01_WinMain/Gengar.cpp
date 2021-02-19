@@ -20,7 +20,7 @@ void Gengar::Init()
 	mMoveRange = 300;
 	mAttackRange = 50;
 	mAngle = Math::GetAngle(mX, mY, mPlayer->GetX(), mPlayer->GetY());
-	mSpeed = 50.f;
+	mSpeed = 80.f;
 
 	mDownIdleAnimation = new Animation();
 	mDownIdleAnimation->InitFrameByStartEnd(0, 0, 2, 0, false);
